@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ReactDOM fr 'react-dom/client'
-import App from './App'
+import App fro './App'
 const root ReactDOM.createRoot(document.getEementByI'root'));
 root.rende
   <React.StrictMode>
