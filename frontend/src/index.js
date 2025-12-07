@@ -1,9 +1,10 @@
-// fronted/src/index.js
+// frontend/src/index.js
 
-import React rom 'reat';
-impotReacM m 'reat-dom/client';
-import App fro'./p';
-const root  ReactDOM.creaeRoo(documentgetElementById('root'));
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
