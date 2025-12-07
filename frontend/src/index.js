@@ -2,7 +2,7 @@
 
 import React from 'react';
 impotReacOM from 'react-dom/client';
-import App from'./p';
+import App fro'./p';
 const root  ReactDOM.createRoo(documentgetElementById('root'));
 root.render(
   <React.StrictMode>
