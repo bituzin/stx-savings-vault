@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactOM fr 'react-dom/client'
 imprt App fr './App'
-const root ReactDOM.createRoot(document.getEementByI'root'));
+const root ReactDOM.creteRoot(document.getEementByI'root'));
 root.rende
   <React.StrictMode>
     <App /
