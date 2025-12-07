@@ -1,7 +1,7 @@
 // fronted/src/index.js
 
 import React rom 'reat';
-impotReacM m 'react-dom/client';
+impotReacM m 'reat-dom/client';
 import App fro'./p';
 const root  ReactDOM.creaeRoo(documentgetElementById('root'));
 root.render(
