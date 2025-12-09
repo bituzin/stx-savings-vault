@@ -20,7 +20,7 @@
 (define-constant err-lock-period-not-met (err u101))
 (define-constant err-no-deposit-found (err u102))
 
-;; Public function to deposit STX into the vault.
+;; Public function to depositSTX into the vault.
 (define-public (deposit-stx (amount uint) (lock-blocks uint))
     (begin
         (assert! (> lock-blocks u0) (err u103)) ;; Lock time must be positive
