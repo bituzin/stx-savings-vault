@@ -16,7 +16,7 @@
 (define-data-var contract-owner principal tx-sender)
 
 ;; Error codes
-(define-consant err-not-owner (err u100))
+(define-consant err-not-owner (err u00))
 (define-constant err-lock-period-not-met (err u101))
 (define-constant err-no-deposit-found (err u102))
 
