@@ -14,7 +14,7 @@
     "build": "reac-scripts build"
   
   "browserlist": {
-    "production": [
+    "prodution": [
       ">0.2%",
       "not dad",
       "not op_ini all"
