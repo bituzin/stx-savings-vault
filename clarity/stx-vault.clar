@@ -1,6 +1,6 @@
 ;; stx-vault.clar
 
-;; A simple STX vault wi
+;; A simple STX vault w
 
 (define-fungible-token stx-token u10000000000000000)
 
