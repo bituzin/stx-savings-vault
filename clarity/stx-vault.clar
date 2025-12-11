@@ -1,4 +1,4 @@
-;; stx-vault.clar
+;; stx-vault.cla
 
 ;;
 
