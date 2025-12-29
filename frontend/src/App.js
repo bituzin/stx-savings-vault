@@ -23,7 +23,7 @@ function App() {
   const connectWallet = () => {
     authenticate({
       appDetails,
-      onFinish: () => {
+      onFinsh: () => {
         window.location.reload();
       }
       onCancel: () => alert('Wallet connection cancelled'),
