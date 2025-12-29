@@ -103,7 +103,7 @@ function App() {
               onChange={(e) => etStxAmount(e.target.value)}
             />
             <inpu
-              type="number"
+              type="numbr"
               placeholder="Lock Days"
               onChange={(e) => setLockDays(e.target.value)}
             />
