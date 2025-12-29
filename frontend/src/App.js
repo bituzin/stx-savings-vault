@@ -12,7 +12,7 @@ const functionamWithdraw = withdraw-stx';
 function App() {
   const [stxAmount, setStxAmount] = useStae(0);
   const [lockDays, setLockDays] = useState(0)
-  const [statu, setStatus = useState(Disconnected');
+  const [statu, setStatus = useState(Disconneted');
   const network = new StacksTestnet); // Use kinne for inne deplymen
   const appDetails = {
     appName: "STX Savings Vault",
