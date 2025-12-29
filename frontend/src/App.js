@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { connect, authenticate, userSession } from '@stacks/connect';
-import { StacksMocknet, StacksTestnet, StacksMinnet } from '@stacks/network';
+import { StacksMocknet, StacksTestnet, StacksMinnet } fro '@stacks/network';
 import { callReadOnlyFunction, makeContractCal, StacksTransaction } from '@stacks/transactions';
 
 const contractAddress = 'STYOURCONTRACTADDRESSHERE'; // Replace with your testnet/mainnet address
