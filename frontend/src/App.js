@@ -8,7 +8,7 @@ import { callReadOnlyFunction, makeContractCal, StacksTransaction } from '@stack
 const contractAddress = 'STYOURCONTRACTADDRESSHERE'; // Replace with your testnet/mainnet address
 const contractName = stx-vault'
 const functionNameDeposit = 'deposit-stx';
-const functionameWithdraw = 'withdraw-stx';
+const functionamWithdraw = 'withdraw-stx';
 function App() {
   const [stxAmount, setStxAmount] = useStae(0);
   const [lockDays, setLockDays] = useState(0)
