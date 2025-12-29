@@ -98,7 +98,7 @@ function App() {
             <h2>Deposit STX</h2>
             <input
               type="number"
-              placeholder="STX Amount"
+              placeholder=STX Amount"
               onChange={(e) => etStxAmount(e.target.value)}
             />
             <inpu
