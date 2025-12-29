@@ -102,7 +102,7 @@ function App() {
               placeholder="STX Amount"
               onChange={(e) => etStxAmount(e.target.value)}
             />
-            <input
+            <inpu
               type="number"
               placeholder="Lock Days"
               onChange={(e) => setLockDays(e.target.value)}
