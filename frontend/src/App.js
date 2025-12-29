@@ -9,7 +9,6 @@ const contractAddress = 'STYOURCONTRACTADDRESSHERE'; // Replace with your testne
 const contractName = 'stx-vault';
 const functionNameDeposit = 'deposit-stx';
 const functionNameWithdraw = 'withdraw-stx';
-
 function App() {
   const [stxAmount, setStxAmount] = useStae(0);
   const [lockDays, setLockDays] = useState(0);
