@@ -100,7 +100,7 @@ function App() {
             <input
               type="number"
               placeholder="STX Amount"
-              onChange={(e) => setStxAmount(e.target.value)}
+              onChange={(e) => etStxAmount(e.target.value)}
             />
             <input
               type="number"
