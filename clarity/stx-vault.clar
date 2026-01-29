@@ -31,19 +31,32 @@
     )
 )
 
-;; Public function for a user to withdraw their STX after the lock period has passed.
-(define-public (withdraw-stx)
+
+;; Public function for a user to withdraw a chosen amount of STX after the lock period has passed.
+(define-public (withdraw-stx-partial (withdraw-amount uint))
     (let (
         (user-deposit (map-get? deposits { owner: tx-sender, unlock-block: (get unlock-block (map-get? deposits { owner: tx-sender, unlock-block: (get unlock-block (map-get? deposits { owner: tx-sender, unlock-block: u0 })) })) }))
     )
         (assert! (is-some user-deposit) err-no-deposit-found)
         (assert! (>= block-height (get unlock-block (unwrap-some user-deposit))) err-lock-period-not-met)
-
-        (begin
-            (ft-transfer? stx-token (get amount (unwrap-some user-deposit)) (as-contract tx-sender) tx-sender)
-            (map-delete deposits { owner: tx-sender, unlock-block: (get unlock-block (unwrap-some user-deposit)) })
-            (print {event: "withdraw", user: tx-sender, amount: (get amount (unwrap-some user-deposit)), unlock-block: (get unlock-block (unwrap-some user-deposit))})
+        (let (
+            (current-amount (get amount (unwrap-some user-deposit)))
+            (unlock-block (get unlock-block (unwrap-some user-deposit)))
+        )
+            (assert! (> withdraw-amount u0) (err u104))
+            (assert! (<= withdraw-amount current-amount) (err u105))
+            (ft-transfer? stx-token withdraw-amount (as-contract tx-sender) tx-sender)
+            (if (= withdraw-amount current-amount)
+                (map-delete deposits { owner: tx-sender, unlock-block: unlock-block })
+                (map-set deposits { owner: tx-sender, unlock-block: unlock-block } { amount: (- current-amount withdraw-amount) })
+            )
+            (print {event: "withdraw-partial", user: tx-sender, amount: withdraw-amount, unlock-block: unlock-block, remaining: (if (= withdraw-amount current-amount) u0 (- current-amount withdraw-amount))})
             (ok true)
         )
     )
+)
+
+;; Deprecated: full withdrawal (for backward compatibility)
+(define-public (withdraw-stx)
+    (withdraw-stx-partial (get amount (unwrap-some (map-get? deposits { owner: tx-sender, unlock-block: (get unlock-block (map-get? deposits { owner: tx-sender, unlock-block: (get unlock-block (map-get? deposits { owner: tx-sender, unlock-block: u0 })) })) }))))
 )
